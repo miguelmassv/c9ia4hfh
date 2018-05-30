@@ -12,6 +12,7 @@ class RoomsController < ApplicationController
     if @room.save
       redirect_to rooms_path
     else
+      flash[:notice] = "El producto ha sido eliminado exitosamente"
       render :new
     end
   end
